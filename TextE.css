@@ -1,0 +1,88 @@
+@import "http://webfonts.ru/import/adine.css";
+@import "http://webfonts.ru/import/alexander.css";
+@import "http://webfonts.ru/import/opengost.css";
+@import "http://webfonts.ru/import/alegreyasc.css";
+@import "http://webfonts.ru/import/bradobrei.css";
+@import "http://webfonts.ru/import/champignon.css";
+
+body{
+	background: url(http://content.wallpapers-room.com/resolutions/1920x1080/b/Wallpapers-room_com___behind_glass_wallpaper_by_martz90_1920x1080.jpg);
+	background-size: cover;
+	background-attachment: fixed
+}
+
+#vewText, #chText{
+	width:40%;
+	height:300px;
+	border: 1px solid #000;
+	margin: 20px auto;
+	padding: 10px;
+	background: rgba(180,210,255,0.7);
+
+}
+#vewText{
+	overflow-y: scroll;
+}
+#but{
+	margin: 1% 40%;
+}
+#but input {
+		border-radius: 20px;
+		margin:0 10px;
+		padding: 5px;
+		background: -webkit-linear-gradient(top, #6F6FFB 0%,#011FA9 100%);
+		border:none;
+;
+}
+#but input:hover{
+				background: #3148B9;
+				opacity: 0.7;
+
+}
+textarea{
+	width: 93%;
+	height: 200px;
+	margin: 20px;
+}
+#redahChText, #creatChText, #tableCol, #marker,#optionTable,#optionList,#backNewPage{
+	display: none;
+}
+
+  #createdTable {
+	border-collapse: collapse;
+}  
+
+#tableCol{
+	width: 80px;
+	height: 80px;
+	border: 2px solid #ccc;
+	position: absolute;
+	margin: -20px 90px;
+}
+
+#tableCol td:hover{
+	box-shadow: 0 0 10px rgba(10,32,107,0.9);
+	border-radius: 30%;
+}
+#newPage input:not(.optionBut){
+	width: 50px;
+}
+#backNewPage{
+	width:99%;
+	height:100%;
+	background: rgba(100,100,100,0.2);
+	position:absolute;
+	top:0;
+}
+
+#newPage{
+	background: rgba(200,200,200,0.9);
+	position: absolute;
+	margin: 10px 24%;
+	width: 40%;
+	height: 88%;
+	padding:2% 5%;
+	top: 0;
+	display: none;
+}
+

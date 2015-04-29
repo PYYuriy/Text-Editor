@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Text Editor</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="TextE.css">
+<script src="TextE.js"></script>
+</head>
+<body>
+	<form name="f1">
+		<div id="vewText" >
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem 
+				  nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.</p>
+				  <p>Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper 
+				  suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+		</div>
+		
+		<!--кнопки навігації-->
+		<div id="but">
+		<input type="button" name="redah" value="Редагувати"/>
+		<input type="button" name="creat" value="Стилызувати"/>
+		</div>
+		<!--end кнопки навігації-->
+
+		<!--Редагування-->
+		<div id="chText">
+			<div id="redahChText">
+				<textarea name="textArea"></textarea><br/>
+				<input type="button" name="save" value="Зберегти"/>
+				<input type="button" name="add" value="Додати"/>
+			</div>
+
+
+			<!--end Редагування-->
+
+			<!--Стилізація-->
+			<div id="creatChText">
+				<p> Розмір ткесту 
+
+					<input type="radio" name="rbtn" value="12pt"/>12pt
+					<input type="radio" name="rbtn" value="14pt"/>14pt
+					<input type="radio" name="rbtn" value="16pt"/>16pt
+					<input type="radio" name="rbtn" value="18pt"/>18pt
+					<input type="radio" name="rbtn" value="20pt"/>20pt </p>
+				<p>Шрифт 
+					<select name="list">
+					<option value="Arial">Arial</option>
+					<option value="Times New Roman">Times New Roman</option>
+					<option value="Adine Kirnberg">Adine Kirnberg</option>
+					<option value="Alexander">Alexander</option>
+					<option value="OpenGost Type A">OpenGost Type A</option>
+					<option value="Alegreya Sans SC">Alegreya Sans SC</option>
+					<option value="Bradobrei">Bradobrei</option>
+					<option value="Champignon">Champignon</option>
+					</select> </p>
+					<p>
+					<input type="button" name="textColor" value="Колір тексту">
+					<input type="button" name="backColor" value="Колір фону"></p>
+					<table id="tableCol">
+						<tr>
+							<td class="colors" style=" background:#FF8080"></td>
+							<td class="colors" style=" background:#FFFF80"></td>
+							<td class="colors" style=" background:#80FF80"></td>
+						</tr>
+						<tr>
+							<td class="colors" style=" background:#80FFFF"></td>
+							<td class="colors" style=" background:#0080FF"></td>
+							<td class="colors" style=" background:#FF80C0"></td>
+						</tr>
+						<tr>
+							<td class="colors" style=" background:#FF0000"></td>
+							<td class="colors" style=" background:#00FF00"></td>
+							<td class="colors" style=" background:#000080"></td>
+						</tr>
+					</table>
+
+					<p><input type="checkbox" name="boldBtn"/>Жирний такст</p>
+					<p><input type="checkbox" name="italikBtn"/>Курсивний текст</p>
+			</div>
+			<!--end Стилізація-->
+
+		</div>
+		
+		<div id="backNewPage"></div>
+		<div id="newPage">
+			<h1>Виберіть що саме ви хочете додати</h1>
+			<p> <input type="radio" name="radioSwap" value="block"> Таблиця
+					<input type="radio" name="radioSwap" value="block"> Список</p>
+
+	<!--Налаштування таблиці-->
+			<div id="optionTable" >
+				<p> Введіть кількість рядків таблиці 
+					<input type="number" name="trNamber"/></p>
+				<p> Введіть кількість стовпців в таблиці 
+					<input type="number" name="tbNamber"/></p>
+
+				<h2>Стилізуйте таблицю</h2>
+				<p>Введіть ширину комірки таблиці: 
+					<input type="number" name="widthTd"></p>
+				<p>Введіть висоту комірки таблиці: 
+					<input type="number" name="heightTd"></p>
+				<p>Товщина: 
+				<input type="number" name="thickBorder"> 
+
+					 Тип лінії: <select name="typeBorder"> 
+												<option value="dotted">dotted</option>
+												<option value="dashed">dashed</option>
+												<option value="solid">solid</option>
+												<option value="double">double</option>
+												<option value="groove">groove</option>
+												<option value="ridge">ridge</option>
+												<option value="inset">inset</option>
+												<option value="outset">outset</option>
+											</select>
+
+					 Колір лінії: <select name="colorBorder" > 
+											<option value="#FFFF80"style=" background:#FFFF80"></option>
+											<option value="#80FF80"style=" background:#80FF80"></option>
+											<option value="#8000FF"style=" background:#8000FF"></option>
+											<option value="#FF0080"style=" background:#FF0080"></option>
+											<option value="#F9A904"style=" background:#F9A904"></option>
+												</select>
+					 </p>
+					 <input class="optionBut" type="button" name="creatTable"value="Створити таблицю"/>
+			</div>
+	<!--- End Налаштування таблиці-->
+
+	<!--Налаштування списка-->
+			<div id="optionList">
+				<p>Виберіть тип списку: 
+						<select name="listType" >
+							<option value="ol">Нумерований </option>
+							<option value="ul">Маркований</option>
+						</select></p>
+					 <div id="marker">
+						<select name="markerType">
+							<option value="disc">disc</option>
+							<option value="circle">circle</option>
+							<option value="square">square</option>
+						</select>
+					</div>
+				<p>Введіть кількість елементів списк: 
+				<input type="number" name="listNamber"></p>
+				<input class="optionBut" type="button" name="creatList"value="Створити список"/>
+			</div>
+	<!--End Налаштування списка-->
+		</div>
+</form>
+</body>
+</html>
